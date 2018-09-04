@@ -1,0 +1,5 @@
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list | tee /etc/apt/sources.list.d/mssql-server-2017.list
+apt-get update
+apt-get install mssql-server
+sudo /opt/mssql/bin/mssql-conf setup
